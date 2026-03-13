@@ -11,8 +11,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Format message for WhatsApp
+    const whatsappMessage = `*New Contact Form Submission*%0A%0A` +
+      `*Name:* ${formData.name}%0A` +
+      `*Email:* ${formData.email}%0A` +
+      `*Phone:* ${formData.phone}%0A` +
+      `*Message:* ${formData.message}%0A%0A` +
+      `Sent from SABP Technologies website`;
+    
+    // WhatsApp number (replace with your actual number)
+    const whatsappNumber = '919765056789'; // Remove + and spaces
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+    
+    // Show success message
     setShowToast(true);
+    
+    // Reset form
     setFormData({ name: '', email: '', phone: '', message: '' });
+    
+    // Hide toast after 3 seconds
     setTimeout(() => setShowToast(false), 3000);
   };
 
@@ -45,6 +68,15 @@ const Contact = () => {
               <h4>Phone</h4>
               <p>9765056789</p>
               <p>9704233233</p>
+              <a 
+                href="https://wa.me/919765056789?text=Hello%20SABP%20Technologies!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="whatsapp-link"
+              >
+                <i className="fab fa-whatsapp"></i>
+                Chat on WhatsApp
+              </a>
             </div>
             <div className="info-card">
               <i className="fas fa-envelope"></i>
@@ -101,7 +133,8 @@ const Contact = () => {
                 required
               ></textarea>
               <button type="submit" className="submit-btn">
-                Send Message
+                <i className="fab fa-whatsapp"></i>
+                Send via WhatsApp
               </button>
             </form>
           </motion.div>
@@ -110,8 +143,8 @@ const Contact = () => {
 
       {showToast && (
         <div className="toast">
-          <i className="fas fa-check-circle"></i>
-          Message sent successfully!
+          <i className="fab fa-whatsapp"></i>
+          Redirecting to WhatsApp...
         </div>
       )}
     </section>
