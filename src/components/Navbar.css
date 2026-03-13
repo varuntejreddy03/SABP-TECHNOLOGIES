@@ -1,0 +1,150 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(6, 13, 31, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(26, 111, 212, 0.2);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-logo img:hover {
+  opacity: 0.85;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar-menu a {
+  color: var(--text-white);
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-light);
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: var(--primary);
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.navbar-cta {
+  background: linear-gradient(135deg, #1A6FD4, #00C6FF);
+  color: var(--text-white);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 15px rgba(26, 111, 212, 0.4);
+  transition: all 0.3s ease;
+}
+
+.navbar-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 111, 212, 0.5);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+/* Responsive navbar logo sizes */
+@media (max-width: 1023px) {
+  .navbar-logo img {
+    width: 130px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-logo img {
+    width: 110px;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--bg-dark);
+    flex-direction: column;
+    padding: 100px 40px;
+    gap: 30px;
+    transition: right 0.3s ease;
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

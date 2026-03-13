@@ -1,0 +1,29 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A6FD4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2196F3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="240" height="240" rx="24" fill="url(#logoGrad)"/>
+  
+  <!-- SB Text - Large and Bold -->
+  <text x="120" y="135" 
+        font-family="Montserrat, Arial, sans-serif" 
+        font-size="95" 
+        font-weight="800" 
+        fill="white" 
+        text-anchor="middle" 
+        dominant-baseline="middle">SB</text>
+  
+  <!-- TECHNOLOGIES Text - Smaller -->
+  <text x="120" y="185" 
+        font-family="Poppins, Arial, sans-serif" 
+        font-size="22" 
+        font-weight="600" 
+        fill="white" 
+        text-anchor="middle" 
+        letter-spacing="2">TECHNOLOGIES</text>
+</svg>
