@@ -160,29 +160,3 @@
     padding: 30px 20px;
   }
 }
-
-.whatsapp-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #25D366;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  font-weight: var(--weight-medium);
-  margin-top: 12px;
-  transition: all 0.3s ease;
-}
-
-.whatsapp-link:hover {
-  background: #128C7E;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-}
-
-.whatsapp-link i {
-  font-size: 14px;
-}

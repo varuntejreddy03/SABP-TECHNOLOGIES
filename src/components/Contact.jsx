@@ -1,11 +1,7 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [showToast, setShowToast] = useState(false);
 
@@ -46,37 +42,18 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="contact-header">
           <span className="section-tag">REACH US</span>
           <h2 className="section-title">Get In Touch</h2>
-        </motion.div>
+        </div>
 
         <div className="contact-content">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="contact-info"
-          >
+          <div className="contact-info">
             <div className="info-card">
               <i className="fas fa-phone"></i>
               <h4>Phone</h4>
               <p>9765056789</p>
               <p>9704233233</p>
-              <a 
-                href="https://wa.me/919765056789?text=Hello%20SABP%20Technologies!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="whatsapp-link"
-              >
-                <i className="fab fa-whatsapp"></i>
-                Chat on WhatsApp
-              </a>
             </div>
             <div className="info-card">
               <i className="fas fa-envelope"></i>
@@ -91,14 +68,9 @@ const Contact = () => {
               <p>Gajularega, Vizianagaram</p>
               <p>Andhra Pradesh - 535003</p>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="contact-form-wrapper"
-          >
+          <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -137,7 +109,7 @@ const Contact = () => {
                 Send via WhatsApp
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
 
