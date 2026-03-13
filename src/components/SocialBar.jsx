@@ -9,7 +9,7 @@ const SocialBar = () => {
       <a href="https://www.instagram.com/sabptechnologies" target="_blank" rel="noopener noreferrer" className="social-icon">
         <i className="fab fa-instagram"></i>
       </a>
-      <a href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+      <a href="https://www.linkedin.com/company/sabptechnologiesllp" target="_blank" rel="noopener noreferrer" className="social-icon">
         <i className="fab fa-linkedin-in"></i>
       </a>
     </div>

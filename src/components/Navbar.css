@@ -28,6 +28,17 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-logo img {
@@ -41,7 +52,7 @@
 }
 
 .navbar-logo img:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .navbar-menu {
@@ -113,12 +124,20 @@
 
 /* Responsive navbar logo sizes */
 @media (max-width: 1023px) {
+  .navbar-logo {
+    padding: 6px 12px;
+  }
+  
   .navbar-logo img {
     width: 130px;
   }
 }
 
 @media (max-width: 767px) {
+  .navbar-logo {
+    padding: 4px 10px;
+  }
+  
   .navbar-logo img {
     width: 110px;
   }
