@@ -6,21 +6,21 @@ import samratImg from '../assets/team/samrat-seethamsetty.jpg';
 const teamData = [
   {
     id: 1,
-    name: "Bhargav Majji",
+    name: "Samrat Seethamsetty",
     role: "Founder & CEO",
-    bio: "Driving strategic growth and innovation at SABP Technologies. With deep expertise in marketing, brand development, and digital strategy, Bhargav focuses on building impactful solutions and expanding business opportunities in a rapidly evolving market.",
+    bio: "Leading SABP with expertise in construction, interiors, and digital marketing. Known for strong communication and business development skills, Samrat focuses on building lasting client relationships and driving innovation across diverse business sectors.",
     photo: bhargavImg,
-    alt: "Bhargav Majji - Founder & CEO, SABP Technologies LLP",
+    alt: "Samrat Seethamsetty - Founder & CEO, SABP Technologies LLP",
     tags: ["Strategic Growth", "Brand Development", "Digital Strategy"],
     delay: "0s"
   },
   {
     id: 2,
-    name: "Samrat Seethamsetty",
+    name: "Bhargav Majji",
     role: "Co-Founder & Managing Director",
-    bio: "Leading SABP with expertise in construction, interiors, and digital marketing. Known for strong communication and business development skills, Samrat focuses on building lasting client relationships and driving innovation across diverse business sectors.",
+    bio: "Driving strategic growth and innovation at SABP Technologies. With deep expertise in marketing, brand development, and digital strategy, Bhargav focuses on building impactful solutions and expanding business opportunities in a rapidly evolving market.",
     photo: samratImg,
-    alt: "Samrat Seethamsetty - Co-Founder & MD, SABP Technologies LLP",
+    alt: "Bhargav Majji - Co-Founder & MD, SABP Technologies LLP",
     tags: ["Business Development", "Digital Marketing", "Client Relations"],
     delay: "0.15s"
   }
