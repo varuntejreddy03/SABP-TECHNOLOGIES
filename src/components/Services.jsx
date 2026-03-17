@@ -29,7 +29,7 @@ const services = [
     icon: 'fa-building',
     title: 'Construction & Interiors',
     description: 'End-to-end solutions in construction planning and interior design. We help businesses and individuals build smarter spaces with innovative design thinking and quality execution.',
-    stat: { icon: '🏗️', text: '<span>Expert Construction &</span><br />Interior Solutions' },
+    stat: { icon: '🏗️', text: '<span>18+ Construction &</span><br />35+ Interior Projects' },
     badges: ['🏗️ Construction', '🛋️ Interiors']
   },
   {

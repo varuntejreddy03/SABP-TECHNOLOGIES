@@ -71,9 +71,9 @@ const DroneSolutions = () => {
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <div className="partner-badge">🤝 OFFICIAL DRONE PARTNER</div>
+                        <div className="partner-badge">🤝 OUR TECHNOLOGY PARTNER</div>
                         <h3 className="partner-name">Dhaksha Unmanned Systems</h3>
-                        <div className="partner-tagline">End-To-End UAS/UAV Solution Provider</div>
+                        <div className="partner-tagline">Building credibility through world-class engineering</div>
                         
                         <div className="website-link">
                             <a href="https://dhakshadrones.com" target="_blank" rel="noopener noreferrer">
@@ -86,23 +86,23 @@ const DroneSolutions = () => {
                         <div className="partner-points">
                             <div className="partner-point">
                                 <div className="partner-dot"></div>
-                                <p>Founded by MIT Alumni in 2019 — a trusted independent private limited company in the drone industry.</p>
+                                <p>Utilizing high-end engineering founded by MIT Alumni (2019) to provide industry-leading reliability.</p>
                             </div>
                             <div className="partner-point">
                                 <div className="partner-dot"></div>
-                                <p>Exclusive Strategic Partner of Anna University, Chennai (until 2028) — driving R&D, manufacturing, and global drone marketing.</p>
+                                <p>Leveraging strategic R&D and manufacturing partnerships with Anna University, Chennai.</p>
                             </div>
                             <div className="partner-point">
                                 <div className="partner-dot"></div>
-                                <p>World-class factory & R&D center at Ambattur, Chennai — a hub for drone innovation and excellence.</p>
+                                <p>All drone hardware is developed in a state-of-the-art facility at Ambattur — the hub of innovation.</p>
                             </div>
                             <div className="partner-point">
                                 <div className="partner-dot"></div>
-                                <p>Partnered with CASR-RPTO (DGCA Approved) — providing certified professional drone pilot training for UAV operators.</p>
+                                <p>Facilitating certified DGCA-approved pilot training programs for all our clients through CASR-RPTO.</p>
                             </div>
                             <div className="partner-point">
                                 <div className="partner-dot"></div>
-                                <p>Backed by Coromandel International Ltd, Murugappa Group (since July 2023) — marking a new era of scale and trust.</p>
+                                <p>Ensuring long-term project scale and support with the stability of Coromandel (Murugappa Group).</p>
                             </div>
                         </div>
 
