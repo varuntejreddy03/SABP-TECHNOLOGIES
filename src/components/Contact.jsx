@@ -16,8 +16,7 @@ const Contact = () => {
       `*Message:* ${formData.message}%0A%0A` +
       `Sent from SABP Technologies website`;
     
-    // WhatsApp number (replace with your actual number)
-    const whatsappNumber = '919765056789'; // Remove + and spaces
+    const whatsappNumber = '919704233233'; // Remove + and spaces
     
     // Create WhatsApp URL
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
