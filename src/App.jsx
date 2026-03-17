@@ -11,7 +11,6 @@ import Leadership from './components/Leadership';
 import CTABanner from './components/CTABanner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SocialBar from './components/SocialBar';
 import './App.css';
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
       <CTABanner />
       <Contact />
       <Footer />
-      <SocialBar />
     </div>
   );
 }

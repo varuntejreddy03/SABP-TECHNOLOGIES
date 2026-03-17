@@ -241,19 +241,70 @@
 }
 
 @media (max-width: 768px) {
+  .drone-solutions {
+    padding: 60px 0;
+  }
+
+  .drone-subtext {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
   .drone-content-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
   }
   
   .drone-info-col {
     order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .drone-features {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .dhaksha-card {
     order: 2;
+    text-align: left; /* Keep partner card info left-aligned for hierarchy */
+    padding: 24px 20px;
   }
   
   .drone-stats-row {
+    width: 100%;
     flex-wrap: wrap;
+  }
+
+  .drone-stat {
+    flex: 1 0 50%;
+    padding: 16px 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .drone-stat:nth-child(even), 
+  .drone-stat:last-child {
+    border-right: none;
+  }
+
+  .drone-stat-num {
+    font-size: 1.8rem;
+  }
+
+  .drone-cta-btns {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn {
+    justify-content: center;
   }
 }
