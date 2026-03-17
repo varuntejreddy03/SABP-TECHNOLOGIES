@@ -21,7 +21,7 @@ const teamData = [
     bio: "Samrat Seethamsetty leads SABP with expertise in construction, interiors, and digital marketing. Known for his strong communication and business development skills, he focuses on building lasting client relationships and bringing new opportunities to the organization while driving innovation and growth across its diverse business sectors.",
     photo: samratImg,
     alt: "Samrat Seethamsetty - Co-Founder & MD, SABP Technologies LLP",
-    tags: ["Business Development", "Digital Marketing", "Client Relations"],
+    tags: ["Construction & Interiors", "Business Development", "Digital Marketing", "Client Relations"],
     delay: "0.15s"
   }
 ];
