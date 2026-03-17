@@ -26,10 +26,11 @@ const services = [
     badges: ['🌐 Web Dev', '📱 App Dev']
   },
   {
-    icon: 'fa-paper-plane',
-    title: 'Drone Technology & Applications',
-    description: 'Authorized sales and service provider for agricultural drones. We offer drone solutions for agriculture, surveying, mapping, infrastructure inspection, and aerial data collection — backed by expert training and after-sales support.',
-    isDrone: true
+    icon: 'fa-building',
+    title: 'Construction & Interiors',
+    description: 'End-to-end solutions in construction planning and interior design. We help businesses and individuals build smarter spaces with innovative design thinking and quality execution.',
+    stat: { icon: '🏗️', text: '<span>Expert Construction &</span><br />Interior Solutions' },
+    badges: ['🏗️ Construction', '🛋️ Interiors']
   },
   {
     icon: 'fa-robot',
@@ -79,23 +80,6 @@ const Services = () => {
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               
-              {/* Drone Card Special Content (Unchanged) */}
-              {service.isDrone && (
-                <>
-                  <div className="drone-stat-strip">
-                    <div className="drone-stat-icon">🚁</div>
-                    <div className="drone-stat-text">
-                      <span>500+ Agricultural</span><br />
-                      Drones Acquired in Just 1 Year
-                    </div>
-                  </div>
-                  <div className="service-badges">
-                    <span className="service-badge badge-sales">🛒 Drone Sales</span>
-                    <span className="service-badge badge-service">🔧 Drone Service</span>
-                  </div>
-                </>
-              )}
-
               {/* Other Cards Content */}
               {service.stat && (
                 <>

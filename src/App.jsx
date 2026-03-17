@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import VisionMission from './components/VisionMission';
 import Services from './components/Services';
+import DroneSolutions from './components/DroneSolutions';
 import Technologies from './components/Technologies';
 import WhyChooseUs from './components/WhyChooseUs';
 import Leadership from './components/Leadership';
@@ -21,6 +22,7 @@ function App() {
       <About />
       <VisionMission />
       <Services />
+      <DroneSolutions />
       <Technologies />
       <WhyChooseUs />
       <Leadership />

@@ -1,0 +1,259 @@
+.drone-solutions {
+  background: linear-gradient(135deg, #060D1F 0%, #0D2B6E 100%);
+  padding: 100px 0;
+  color: #FFFFFF;
+}
+
+.white-text {
+  color: #FFFFFF !important;
+}
+
+.drone-subtext {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto 60px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.drone-content-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.drone-description {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.drone-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.drone-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+.drone-features i {
+  color: #00C6FF;
+  font-size: 1.1rem;
+}
+
+.drone-stats-row {
+  display: flex;
+  margin-bottom: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drone-stat {
+  flex: 1;
+  text-align: center;
+  padding: 24px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drone-stat:last-child {
+  border-right: none;
+}
+
+.drone-stat-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFFFFF, #00C6FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.drone-stat-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.drone-cta-btns {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-filled {
+  background: #FFFFFF;
+  color: #0D2B6E;
+}
+
+.btn-filled:hover {
+  background: #00C6FF;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+}
+
+.btn-outline:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.dhaksha-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 36px 32px;
+}
+
+.partner-badge {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #00C6FF;
+  background: rgba(0, 198, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.partner-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  color: #FFFFFF;
+}
+
+.partner-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
+}
+
+.website-link {
+  margin-bottom: 24px;
+}
+
+.website-link a {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #00C6FF;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.website-link a:hover {
+  opacity: 0.8;
+}
+
+.partner-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.partner-point {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.partner-point p {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.partner-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00C6FF;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.partner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.partner-tag {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #00C6FF;
+  background: rgba(0, 198, 255, 0.1);
+  border: 1px solid rgba(0, 198, 255, 0.25);
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+@media (max-width: 1024px) {
+  .drone-content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .drone-content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .drone-info-col {
+    order: 1;
+  }
+  
+  .dhaksha-card {
+    order: 2;
+  }
+  
+  .drone-stats-row {
+    flex-wrap: wrap;
+  }
+}
