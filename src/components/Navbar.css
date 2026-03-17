@@ -118,7 +118,7 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: var(--white);
+  background: #ffffff;
   transition: all 0.3s ease;
 }
 
@@ -159,11 +159,33 @@
     right: 0;
   }
 
+  .navbar-menu a {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   .navbar-cta {
-    display: none;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 11px;
+    margin-right: 15px;
+    white-space: nowrap;
   }
 
   .hamburger {
     display: flex;
+    z-index: 1001;
   }
 }

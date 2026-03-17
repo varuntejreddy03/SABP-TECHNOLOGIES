@@ -34,7 +34,7 @@ const Navbar = () => {
           Get in Touch
         </button>
 
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
           <span></span>
           <span></span>
           <span></span>
