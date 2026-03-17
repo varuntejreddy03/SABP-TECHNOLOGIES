@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import './About.css';
 
-const Counter = ({ end, label }) => {
+const Counter = ({ end, label, icon, isFeatured, badge }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -27,9 +27,13 @@ const Counter = ({ end, label }) => {
   }, [isInView, end]);
 
   return (
-    <div className="stat-card" ref={ref}>
-      <h3>{count}+</h3>
-      <p>{label}</p>
+    <div className={`stat-card ${isFeatured ? 'featured' : ''}`} ref={ref}>
+      <div className="stat-icon">
+        <i className={`fas ${icon}`}></i>
+      </div>
+      <h3 className="stat-number">{count}+</h3>
+      <p className="stat-label">{label}</p>
+      {badge && <span className="stat-badge">{badge}</span>}
     </div>
   );
 };
@@ -83,9 +87,28 @@ const About = () => {
             </p>
 
             <div className="stats-grid">
-              <Counter end={50} label="Projects Delivered" />
-              <Counter end={3} label="Years Experience" />
-              <Counter end={100} label="Client Satisfaction" />
+              <Counter 
+                end={50} 
+                label="Projects Delivered" 
+                icon="fa-briefcase" 
+              />
+              <Counter 
+                end={3} 
+                label="Years Experience" 
+                icon="fa-calendar-check" 
+              />
+              <Counter 
+                end={500} 
+                label="Agricultural Drones Acquired" 
+                icon="fa-paper-plane" 
+                isFeatured={true}
+                badge="Within 1 Year 🚁"
+              />
+              <Counter 
+                end={100} 
+                label="Client Satisfaction" 
+                icon="fa-star" 
+              />
             </div>
           </motion.div>
         </div>

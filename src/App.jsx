@@ -6,6 +6,7 @@ import VisionMission from './components/VisionMission';
 import Services from './components/Services';
 import Technologies from './components/Technologies';
 import WhyChooseUs from './components/WhyChooseUs';
+import Leadership from './components/Leadership';
 import CTABanner from './components/CTABanner';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -31,6 +32,7 @@ function App() {
       <Services />
       <Technologies />
       <WhyChooseUs />
+      <Leadership />
       <CTABanner />
       <Contact />
       <Footer />

@@ -7,32 +7,43 @@ const services = [
   {
     icon: 'fa-laptop-code',
     title: 'Technology Solutions',
-    description: 'Digital solutions and expert IT consulting to help businesses streamline operations, optimize infrastructure, and scale efficiently.'
+    description: 'Digital solutions and expert IT consulting to help businesses streamline operations, optimize infrastructure, and scale efficiently.',
+    stat: { icon: '💻', text: '<span>10+ Tech Projects</span><br />Successfully Delivered' },
+    badges: ['🖥️ IT Solutions', '☁️ IT Consulting']
   },
   {
     icon: 'fa-graduation-cap',
     title: 'Skill Development & Training',
-    description: 'Industry-relevant training programs that equip students and professionals with practical, modern technology skills.'
+    description: 'Industry-relevant training programs that equip students and professionals with practical, modern technology skills.',
+    stat: { icon: '🎓', text: '<span>200+ Students</span><br />Trained & Placed' },
+    badges: ['🎓 Live Training', '📜 Certification']
   },
   {
     icon: 'fa-globe',
     title: 'Web & App Development',
-    description: 'Custom web and mobile applications designed to elevate your brand and drive digital growth.'
+    description: 'Custom web and mobile applications designed to elevate your brand and drive digital growth.',
+    stat: { icon: '🌐', text: '<span>20+ Websites & Apps</span><br />Built & Delivered' },
+    badges: ['🌐 Web Dev', '📱 App Dev']
   },
   {
     icon: 'fa-paper-plane',
     title: 'Drone Technology & Applications',
-    description: 'Training and solutions in drone technology for agriculture, surveying, mapping, infrastructure inspection, and aerial data collection.'
+    description: 'Authorized sales and service provider for agricultural drones. We offer drone solutions for agriculture, surveying, mapping, infrastructure inspection, and aerial data collection — backed by expert training and after-sales support.',
+    isDrone: true
   },
   {
     icon: 'fa-robot',
     title: 'Automation & Emerging Tech',
-    description: 'Innovative automation solutions and emerging technologies to drive efficiency and competitive advantage.'
+    description: 'Innovative automation solutions and emerging technologies to drive efficiency and competitive advantage.',
+    stat: { icon: '🤖', text: '<span>Smart Automation</span> for<br />Businesses & Industries' },
+    badges: ['🤖 Automation', '⚡ Emerging Tech']
   },
   {
     icon: 'fa-chalkboard-teacher',
     title: 'Corporate Training',
-    description: 'Specialized corporate training programs to upskill your workforce with the latest industry technologies.'
+    description: 'Specialized corporate training programs to upskill your workforce with the latest industry technologies.',
+    stat: { icon: '🏢', text: '<span>50+ Professionals</span><br />Upskilled & Certified' },
+    badges: ['🏢 Corporate', '📊 Upskilling']
   }
 ];
 
@@ -67,6 +78,39 @@ const Services = () => {
               </div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
+              
+              {/* Drone Card Special Content (Unchanged) */}
+              {service.isDrone && (
+                <>
+                  <div className="drone-stat-strip">
+                    <div className="drone-stat-icon">🚁</div>
+                    <div className="drone-stat-text">
+                      <span>500+ Agricultural</span><br />
+                      Drones Acquired in Just 1 Year
+                    </div>
+                  </div>
+                  <div className="service-badges">
+                    <span className="service-badge badge-sales">🛒 Drone Sales</span>
+                    <span className="service-badge badge-service">🔧 Drone Service</span>
+                  </div>
+                </>
+              )}
+
+              {/* Other Cards Content */}
+              {service.stat && (
+                <>
+                  <div className="service-stat-strip">
+                    <div className="service-stat-icon">{service.stat.icon}</div>
+                    <div className="service-stat-text" dangerouslySetInnerHTML={{ __html: service.stat.text }}></div>
+                  </div>
+                  <div className="service-badges">
+                    {service.badges.map(badge => (
+                      <span key={badge} className="service-badge">{badge}</span>
+                    ))}
+                  </div>
+                </>
+              )}
+
               <a href="#contact" className="service-link">
                 Learn More <i className="fas fa-arrow-right"></i>
               </a>

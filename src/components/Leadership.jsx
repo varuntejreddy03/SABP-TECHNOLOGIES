@@ -1,73 +1,111 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Leadership.css';
+import bhargavImg from '../assets/team/bhargav-majji.jpg';
+import samratImg from '../assets/team/samrat-seethamsetty.jpg';
 
-const leaders = [
+const teamData = [
   {
-    name: 'Bhargav Bhushan Majji',
-    role: 'Designated Partner',
-    icon: 'fa-user-tie'
+    id: 1,
+    name: "Bhargav Majji",
+    role: "Founder & CEO",
+    bio: "Driving strategic growth and innovation at SABP Technologies. With deep expertise in marketing, brand development, and digital strategy, Bhargav focuses on building impactful solutions and expanding business opportunities in a rapidly evolving market.",
+    photo: bhargavImg,
+    alt: "Bhargav Majji - Founder & CEO, SABP Technologies LLP",
+    tags: ["Strategic Growth", "Brand Development", "Digital Strategy"],
+    delay: "0s"
   },
   {
-    name: 'Santosh Samrat Seethamsetty',
-    role: 'Designated Partner',
-    icon: 'fa-user-tie'
+    id: 2,
+    name: "Samrat Seethamsetty",
+    role: "Co-Founder & Managing Director",
+    bio: "Leading SABP with expertise in construction, interiors, and digital marketing. Known for strong communication and business development skills, Samrat focuses on building lasting client relationships and driving innovation across diverse business sectors.",
+    photo: samratImg,
+    alt: "Samrat Seethamsetty - Co-Founder & MD, SABP Technologies LLP",
+    tags: ["Business Development", "Digital Marketing", "Client Relations"],
+    delay: "0.15s"
   }
 ];
 
 const Leadership = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardsRef.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, []);
 
   return (
-    <section className="leadership">
-      <div className="container">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
+    <section id="leadership" className="leadership">
+      <div className="leadership-container">
+        <div className="leadership-header">
           <span className="section-tag">OUR LEADERSHIP</span>
-          <h2 className="section-title white">Meet Our Leaders</h2>
-          <p className="leadership-intro">
-            Led by visionary professionals dedicated to building impactful technological solutions. 
-            Their leadership focuses on innovation, digital transformation, and empowering the next 
-            generation of technology professionals.
+          <h2>The Minds Behind SABP</h2>
+          <p className="subtext">
+            Visionary leaders driving innovation, growth, and digital transformation.
           </p>
-        </motion.div>
-
-        <div className="leaders-grid">
-          {leaders.map((leader, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
-              className="leader-card"
-            >
-              <div className="leader-avatar">
-                <i className={`fas ${leader.icon}`}></i>
-              </div>
-              <h3>{leader.name}</h3>
-              <p className="leader-role">{leader.role}</p>
-            </motion.div>
-          ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="commitment-box"
-        >
-          <h3>Our Commitment</h3>
-          <p>
-            At SABP Technologies LLP, we are committed to creating a future where technology empowers people, 
-            businesses grow through innovation, and skills drive success.
-          </p>
-        </motion.div>
+        <div className="team-grid">
+          {teamData.map((person, index) => (
+            <div 
+              key={person.id}
+              className="team-card"
+              ref={el => cardsRef.current[index] = el}
+              style={{ transitionDelay: person.delay }}
+            >
+              <div className="team-photo-wrap">
+                <img 
+                  src={person.photo} 
+                  alt={person.alt} 
+                  loading="lazy"
+                />
+              </div>
+              
+              <div className="team-card-body">
+                <h3 className="team-name">{person.name}</h3>
+                <div className="team-role-badge">{person.role}</div>
+                
+                <div className="team-divider"></div>
+                
+                <p className="team-bio">{person.bio}</p>
+                
+                <div className="team-tags">
+                  {person.tags.map(tag => (
+                    <span key={tag} className="team-tag">{tag}</span>
+                  ))}
+                </div>
+
+                {/* LinkedIn Icon (Reserved for later)
+                <div className="team-social">
+                  <a href="#" className="linkedin-link">
+                    <i className="fab fa-linkedin"></i>
+                  </a>
+                </div>
+                */}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
