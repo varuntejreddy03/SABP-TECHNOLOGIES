@@ -51,7 +51,7 @@ const DroneSolutions = () => {
                     <div className="drone-stats-row">
                         <div className="drone-stat">
                             <div className="drone-stat-num">500+</div>
-                            <div className="drone-stat-label">Drones<br />Acquired</div>
+                            <div className="drone-stat-label">Drones<br />Acquired & Serviced</div>
                         </div>
                         <div className="drone-stat">
                             <div className="drone-stat-num">1 Year</div>

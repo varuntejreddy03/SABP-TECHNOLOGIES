@@ -45,7 +45,7 @@ const services = [
     description: 'Specialized corporate training programs to upskill your workforce with the latest industry technologies.',
     stat: { icon: '🏢', text: '<span>50+ Professionals</span><br />Upskilled & Certified' },
     badges: ['🏢 Corporate', '📊 Upskilling']
-  }
+  },
 ];
 
 const Services = () => {
