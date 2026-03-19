@@ -58,7 +58,27 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2025 SABP Technologies LLP. All Rights Reserved.</p>
+          <p className="footer-created-by">
+            Made with <span className="footer-heart">❤️</span> by
+            <a
+              className="staffarc-link"
+              href="https://www.staffarc.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/Staffarc-logo.png"
+                alt="StaffArc"
+                className="staffarc-mark"
+                loading="lazy"
+                draggable="false"
+              />
+              <span className="staffarc-name">StaffArc</span>
+            </a>
+          </p>
+          <p className="footer-copyright">
+            &copy; 2026 sabptechnologies.com. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
